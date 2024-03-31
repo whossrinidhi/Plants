@@ -3,24 +3,25 @@ import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 import { theme } from "../constants";
 import Welcome from "../screens/Welcome";
-import Login from "/Users/srinidhi/Desktop/Plant/screens/Login.js";
-import SignUp from "/Users/srinidhi/Desktop/Plant/screens/Signup.js";
-// import Forgot from "../screens/Forgot";
-// import Explore from "../screens/Explore";
-// import Browse from "../screens/Browse";
-// import Product from "../screens/Product";
-// import Settings from "../screens/Settings";
-
+import Login from "../screens/Login.js";
+import SignUp from "../screens/Signup.js";
+import Forgot from "../screens/Forgot.js";
+import Explore from "../screens/Explore";
+import Browse from "../screens/Browse.js";
+import Product from "../screens/Product";
+import Settings from "../screens/Settings";
+import Cart from "../screens/Cart";
 const screens = createStackNavigator(
   {
     Welcome,
     Login,
     SignUp,
-    // Forgot,
-    // Explore,
-    // Browse,
-    // Product,
-    // Settings,
+    Forgot,
+    Explore,
+    Browse,
+    Product,
+    Settings,
+    Cart,
   },
   {
     defaultNavigationOptions: {

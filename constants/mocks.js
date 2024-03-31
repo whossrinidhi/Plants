@@ -85,5 +85,7 @@ const profile = {
   notifications: true,
   newsletter: false,
 };
-
-export { categories, explore, products, profile };
+const cart = {
+  cart: require("../assets/icons/cart.jpg"),
+};
+export { categories, explore, products, profile, cart };
