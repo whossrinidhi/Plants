@@ -33,13 +33,16 @@ export default class Login extends React.Component {
               defaultValue={this.state.password}
               onChangeText={(text) => this.setState({ password: text })}
             />
-            <Button gradient onPress={() => this.handleLogin()}>
+            <Button
+              gradient
+              onPress={() => this.props.navigation.navigate("Browse")}
+            >
               <Text bold white center>
                 Login
               </Text>
             </Button>
 
-            <Button onPress={() => {}}>
+            <Button onPress={() => this.props.navigation.navigate("Forgot")}>
               <Text
                 gray
                 caption
