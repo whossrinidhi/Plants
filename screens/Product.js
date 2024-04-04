@@ -5,21 +5,13 @@ import {
   ScrollView,
   Image,
   FlatList,
+  View,
 } from "react-native";
-// import {  } from "react-native-gesture-handler";
 import { Button, Block, Text, Divider } from "../components";
 import { theme, mocks } from "../constants";
+import { LinearGradient } from "expo-linear-gradient";
 const { width, height } = Dimensions.get("window");
 class Product extends React.Component {
-  static navigationOptions = ({ navigation }) => {
-    return {
-      headerRight: (
-        <Button onPress={() => {}}>
-          <Text>dots</Text>
-        </Button>
-      ),
-    };
-  };
   renderGallery() {
     const { product } = this.props;
     return (
@@ -83,6 +75,31 @@ class Product extends React.Component {
             </Block>
           </Block>
         </Block>
+        <Block style={{ width: width / 3.678 }}>
+          <LinearGradient
+            locations={[0.5, 1]}
+            style={styles.footer}
+            colors={["rgba(255,255,255,0)", "rgba(255,255,255,0.6)"]}
+          >
+            <Button
+              gradient
+              onPress={() => this.props.navigation.navigate("Cameraa")}
+            >
+              <Text bold white center>
+                see on camera
+              </Text>
+            </Button>
+            <View style={styles.space} />
+            <Button
+              gradient
+              onPress={() => this.props.navigation.navigate("Cart")}
+            >
+              <Text bold white center>
+                add to cart
+              </Text>
+            </Button>
+          </LinearGradient>
+        </Block>
       </ScrollView>
     );
   }
@@ -115,5 +132,23 @@ const styles = StyleSheet.create({
   more: {
     width: 55,
     height: 55,
+  },
+  footer: {
+    flex: 1,
+    flexDirection: "row",
+    position: "absolute",
+    bottom: 0,
+    right: 0,
+    left: 0,
+    overflow: "visible",
+    alignItems: "center",
+    justifyContent: "center",
+    height: height * 0.1,
+    width,
+    paddingBottom: 2,
+  },
+  space: {
+    width: 2,
+    height: 1,
   },
 });
