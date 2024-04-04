@@ -11,6 +11,7 @@ import Browse from "../screens/Browse.js";
 import Product from "../screens/Product";
 import Settings from "../screens/Settings";
 import Cart from "../screens/Cart";
+import Cameraa from "../screens/Cameraa";
 const screens = createStackNavigator(
   {
     Welcome,
@@ -22,11 +23,12 @@ const screens = createStackNavigator(
     Product,
     Settings,
     Cart,
+    Cameraa,
   },
   {
     defaultNavigationOptions: {
       headerStyle: {
-        height: theme.sizes.base * 4,
+        height: theme.sizes.base * 5,
         backgroundColor: theme.colors.white, // or 'white
         borderBottomColor: "transparent",
         elevation: 0, // for android only
